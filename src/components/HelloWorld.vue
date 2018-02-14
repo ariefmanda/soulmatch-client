@@ -1,31 +1,35 @@
 <template>
   <div class="container">
-        <div class="row">
-
+        <div class="row" v-if="!token">
           <div class="col-lg-3">
               <h5 class="my-4">Search Your Soulmatch</h5>
               <form>
                   <label for="exampleFormControlInput1">Jenis Kelamin</label>
-                  <select class="form-control form-control-sm">
-                      <option>Small select</option>
+                  <select class="form-control form-control-sm" v-model="searchGender">
+                      <option disabled>Select option</option>
+                      <option>Pria</option>
+                      <option>Wanita</option>
                     </select>
                     <br>
                     <label for="exampleFormControlInput1">Umur dibawah @th</label>
-                  <select class="form-control form-control-sm">
-                      <option>Small select</option>
+                  <select v-model="searchAge" class="form-control form-control-sm">
+                      <option disabled>Select option</option>
+                      <optionv-for="a of 100">{{a}}</option>
                     </select>
                     <br>
                     <label for="exampleFormControlInput1">Tinggi di bawah @cm</label>
-                  <select class="form-control form-control-sm">
-                      <option>Small select</option>
+                  <select v-model="searchHeight" class="form-control form-control-sm">
+                      <option disabled>Select option</option>
+                      <option  v-for="a of 200">{{a}}</option>
                     </select>
                     <br>
                     <label for="exampleFormControlInput1">Berat Badan dibawah @kg</label>
-                  <select class="form-control form-control-sm">
-                      <option>Small select</option>
+                  <select v-model="searchWidht" class="form-control form-control-sm">
+                      <option disabled>Select option</option>
+                      <option v-for="a of 200">{{a}}</option>
                     </select>
                     <br>
-                  <button type="submit" class="btn btn-primary">Search</button>
+                  <button type="submit" class="btn btn-primary" @click="search">Search</button>
                 </form>
           </div>
           <div class="col-lg-9">
@@ -33,63 +37,7 @@
 
         </h3>
 
-        <div class="row text-center text-lg-left">
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
+        <div class="row text-center text-lg-left" v-for="d of data">
           <div class="col-lg-3 col-md-4 col-xs-6">
             <a href="#" class="d-block mb-4 h-100">
               <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
@@ -102,17 +50,51 @@
 </template>
 
 <script>
+import axios from 'axios'
+var baseUrl=`http://localhost:3000/`
 export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      token:localStorage.getItem('token'),
+      searchGender: null,
+      searchAge: null,
+      searchHeight: null,
+      searchWidht: null,
+      data:['sayang']
+    }
+  },
+  created() {
+    //do something after creating vue instance
+    // this.getData()
+  },
+  methods: {
+    getData(){
+      axios.get(`${baseUrl}api`)
+      .then(resp=>{
+        // this.data=resp.data
+      })
+      .catch((err) => {
+        console.error(err);
+      })
+    },
+    search() {
+      axios.post(`${baseUrl}api`,{
+        gender:this.searchGender,
+        age:this.searchAge,
+        height:this.searchHeight,
+        width:this.searchWidht
+      }).then(resp=>{
+          // this.data=resp.data
+      })
+      .catch((err) => {
+        console.error(err);
+      })
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 
 </style>
