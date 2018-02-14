@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <headers/>
     <router-view/>
   </div>
 </template>
 
 <script>
+import headers from '@/components/headers'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    headers
+  }
 }
 </script>
 
 <style>
+
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

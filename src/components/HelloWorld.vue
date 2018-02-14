@@ -1,86 +1,104 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
-  </div>
+  <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3">
+              <h5 class="my-4">Search Your Soulmatch</h5>
+              <form>
+                  <label for="exampleFormControlInput1">Jenis Kelamin</label>
+                  <select class="form-control form-control-sm">
+                      <option>Small select</option>
+                    </select>
+                    <br>
+                    <label for="exampleFormControlInput1">Umur dibawah @th</label>
+                  <select class="form-control form-control-sm">
+                      <option>Small select</option>
+                    </select>
+                    <br>
+                    <label for="exampleFormControlInput1">Tinggi di bawah @cm</label>
+                  <select class="form-control form-control-sm">
+                      <option>Small select</option>
+                    </select>
+                    <br>
+                    <label for="exampleFormControlInput1">Berat Badan dibawah @kg</label>
+                  <select class="form-control form-control-sm">
+                      <option>Small select</option>
+                    </select>
+                    <br>
+                  <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+          </div>
+          <div class="col-lg-9">
+        <h3 class="my-4 text-center text-lg-left">Your Option
+
+        </h3>
+
+        <div class="row text-center text-lg-left">
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
 </template>
 
 <script>
@@ -95,19 +113,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style>
+
 </style>
