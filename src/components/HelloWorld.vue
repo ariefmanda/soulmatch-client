@@ -40,61 +40,7 @@
               <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
             </a>
           </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="#" class="d-block mb-4 h-100">
-              <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            </a>
-          </div>
+          
         </div>
       </div>
       </div>
@@ -102,12 +48,19 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  created(){
+
+  },
+  methods :{
+
   }
 }
 </script>
