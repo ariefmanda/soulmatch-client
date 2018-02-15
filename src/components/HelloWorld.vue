@@ -14,19 +14,19 @@
                     <label for="exampleFormControlInput1">Umur dibawah @th</label>
                   <select v-model="searchAge" class="form-control form-control-sm">
                       <option disabled>Select option</option>
-                      <optionv-for="a of 100">{{a}}</option>
+                      <option v-for="a of 100" :key="a">{{a}}</option>
                     </select>
                     <br>
                     <label for="exampleFormControlInput1">Tinggi di bawah @cm</label>
                   <select v-model="searchHeight" class="form-control form-control-sm">
                       <option disabled>Select option</option>
-                      <option  v-for="a of 200">{{a}}</option>
+                      <option  v-for="a of 200" :key="a">{{a}}</option>
                     </select>
                     <br>
                     <label for="exampleFormControlInput1">Berat Badan dibawah @kg</label>
                   <select v-model="searchWidht" class="form-control form-control-sm">
                       <option disabled>Select option</option>
-                      <option v-for="a of 200">{{a}}</option>
+                      <option v-for="a of 200" :key="a">{{a}}</option>
                     </select>
                     <br>
                   <button type="submit" class="btn btn-primary" @click="search">Search</button>
@@ -37,7 +37,7 @@
 
         </h3>
 
-        <div class="row text-center text-lg-left" v-for="d of data">
+        <div class="row text-center text-lg-left" v-for="d of data" :key="d">
           <div class="col-lg-3 col-md-4 col-xs-6">
             <a href="#" class="d-block mb-4 h-100">
               <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
@@ -91,6 +91,12 @@ export default {
         console.error(err);
       })
     }
+  },
+  created(){
+
+  },
+  methods :{
+
   }
 }
 </script>
