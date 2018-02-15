@@ -7,6 +7,11 @@
           </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto" v-if="token">
+        <li class="nav-item active" @click="home">
+          <div class="nav-link">Home
+              <span class="sr-only">(current)</span>
+          </div>
+        </li>
         <li class="nav-item">
           <div class="nav-link" @click="toProfil">Profil</div>
         </li>
@@ -36,12 +41,14 @@ export default{
     },
     created() {
       //do something after creating vue instance
-      this.cekLogin()
     },
     methods: {
       logout() {
         this.token=null
         localStorage.clear()
+        router.push({
+          name:'login'
+        })
       },
       toProfil(){
         router.push({
@@ -52,13 +59,6 @@ export default{
         router.push({
           name:'HelloWorld'
         })
-      },
-      cekLogin(){
-        if(!this.token){
-          router.push({
-            name:'Login'
-          })
-        }
       }
     }
 }
