@@ -6,7 +6,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto" v-if="!token">
+      <ul class="navbar-nav ml-auto" v-if="token">
         <li class="nav-item">
           <div class="nav-link" @click="toProfil">Profil</div>
         </li>
@@ -31,12 +31,11 @@ import router from '@/router';
 export default{
     data(){
       return{
-        token: null
+        token:localStorage.getItem('token')||null
       }
     },
     created() {
       //do something after creating vue instance
-      token=localStorage.getItem('token')
       this.cekLogin()
     },
     methods: {
