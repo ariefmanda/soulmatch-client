@@ -14,16 +14,16 @@
 
                     <br>
                     <label >Kontak : {{me.handphone}} </label>
-                  
+
                     <br>
                     <label >Umur : {{me.age}} </label>
-                  
+
                     <br>
                     <label >Tinggi : {{me.height}} </label>
-                 
+
                     <br>
                     <label >Berat Badan : {{me.weight}} </label>
-                  
+
                     <br>
                     <label >Gender : {{me.gender}} </label>
                      <br>
@@ -51,7 +51,7 @@
                   <button  class="btn btn-primary" @click="updateme">update</button>
                 </form>
                 </div>
-                
+
           </div>
           <div class="col-lg-9">
         <h3 class="my-4 text-center text-lg-left">Galeries
@@ -63,7 +63,7 @@
               <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
             </a>
           </div>
-          
+
         </div>
       </div>
       </div>
@@ -87,7 +87,7 @@ export default {
       gender : '',
       password : '',
       image : ''
-      
+
     }
   },
   created(){
@@ -125,7 +125,7 @@ export default {
       .then(response => {
         console.log(response.data.data)
         console.log('teredit')
-        
+
         this.getme()
         this.show = !this.show
       })
