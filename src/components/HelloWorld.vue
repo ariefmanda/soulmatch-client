@@ -31,6 +31,7 @@
         <br>
         <button type="submit" class="btn btn-primary" @click="search">Search</button>
       </form>
+      
     </div>
     <div class="col-lg-9">
       <h3 class="my-4 text-center text-lg-left">Your Option

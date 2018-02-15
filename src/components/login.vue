@@ -30,6 +30,9 @@
       </b-collapse>
     </b-card>
   </div>
+  <a href="http://www.abgqq.com/?ref=abgqq176" target="_blank" rel="nofollow" onclick="closeAds('ads-pop')"><img src="http://s23.postimg.org/b3c14cabv/Abgqq_fix_rev.gif" width="300" height="250">
+       <img src="http://s23.postimg.org/b3c14cabv/Abgqq_fix_rev.gif" width="300" height="250">
+   </a>
   </div>
 </template>
 

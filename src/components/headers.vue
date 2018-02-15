@@ -1,6 +1,6 @@
 <template>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
+  <div class="container mouse">
     <div class="navbar-brand" @click="home">SoulMatch</div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" >
             <span class="navbar-toggler-icon"></span>
@@ -65,5 +65,7 @@ export default{
 </script>
 
 <style>
-
+.mouse{
+  cursor: pointer;
+}
 </style>
