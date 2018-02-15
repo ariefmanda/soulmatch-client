@@ -184,7 +184,17 @@ export default {
       this.modal = this.data.filter(e => {
         return e._id == id
       })
+<<<<<<< HEAD
     },
+=======
+    }
+  },
+  created(){
+
+  },
+  methods :{
+
+>>>>>>> 34fb1ee5909a2a613ed646246192ded592b95c45
   }
 }
 </script>
