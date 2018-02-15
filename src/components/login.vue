@@ -36,7 +36,7 @@
 <script>
 import router from '@/router'
 import axios from 'axios'
-let baseUrl = `http://localhost:3000`
+let baseUrl = `http://neoal.xyz:3006`
 export default {
   name : 'login',
   data(){
@@ -47,12 +47,23 @@ export default {
   },
   methods:{
     signup(){
-
+      axios.post(`${baseUrl}/users/create`,{handphone : this.nomor,password : this.password})
+      .then(response => {
+        console.log('terdaftar')
+      }).catch(err => {
+        console.log(err)
+      })
     },
     signin(){
-      console.log('apapun cok');
-      
-      router.push({name : 'profile'})
+     axios.post(`${baseUrl}/users/login`,{handphone : this.nomor,password : this.password})
+      .then(response => {
+        console.log(response.data.token)
+        localStorage.setItem('token',response.data.token)
+        router.push({name : 'profile'})
+      })
+      .catch(err => {
+        console.log(err)
+      })
     }
   }
 }
